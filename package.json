@@ -1,0 +1,39 @@
+{
+    "name": "abus",
+    "version": "2.0.0",
+    "description": "JS message Bus",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack --config webpack.config.prod.js --progress --profile --bail",
+        "build:watch": "webpack --config webpack.config.prod.watch.js --progress --profile --bail",
+        "test": "karma start",
+        "test:watch": "karma start --no-single-run --auto-watch"
+    },
+    "keywords": [
+        "message",
+        "event",
+        "driven",
+        "bus"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/OleksandrTheGreat/ABus.git"
+    },
+    "author": "OleksandrTheGreat",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/jasmine": "^2.5.51",
+        "awesome-typescript-loader": "^3.1.3",
+        "jasmine": "^2.6.0",
+        "karma": "^1.7.0",
+        "karma-jasmine": "^1.1.0",
+        "karma-phantomjs-launcher": "^1.0.4",
+        "karma-webpack": "^2.0.3",
+        "requirejs": "^2.3.3",
+        "sourcemap": "^0.1.0",
+        "typescript": "^2.3.4",
+        "webpack": "^2.6.1",
+        "xfs": "https://github.com/OleksandrTheGreat/xfs.git",
+        "xwebpack": "https://github.com/OleksandrTheGreat/xwebpack.git"
+    }
+}

@@ -1,0 +1,30 @@
+<body>
+    <div id="target1">TARGET1</div>
+    <div id="target2">TARGET2</div>
+    <div id="target3">TARGET3</div>
+    <input id="source" type="text" value="SOURCE" />
+    <button type="button" onclick="sendMessage()">SEND message</button>
+
+    <script src="index.js"></script>
+
+    <script>
+        var bus = new abus.ABus();
+
+        bus.Handle(String, (message) => {
+            window.document.getElementById('target1').innerHTML = message + 1;
+        });
+
+        bus.Handle(String, (message) => {
+            window.document.getElementById('target2').innerHTML = message + 2;
+        });
+
+        bus.Handle(String, (message) => {
+            window.document.getElementById('target3').innerHTML = message + 3;
+        });
+
+        function sendMessage() {
+            let message = window.document.getElementById('source').value;
+            bus.SendAsync(message);
+        }
+    </script>
+</body>
